@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "pair_frames": 72,
+  "dataset_checks": {
+    "dataset_33f_672": {
+      "training": 68,
+      "validation": 4
+    },
+    "dataset_33f_704": {
+      "training": 68,
+      "validation": 4
+    }
+  },
+  "compiled_files": 18,
+  "clean_rgb_used_for_condition_generation": false,
+  "notes": [
+    "condition generation consumes topdown RGB plus camera payload only",
+    "clean RGB is a target/evaluation input to pair construction and training",
+    "no camera fitting, optical flow, or homography is performed"
+  ]
+}

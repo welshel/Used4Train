@@ -1,0 +1,7 @@
+{
+  "best_step": 700,
+  "source_checkpoint": "outputs/p49a_tripo_vace13b_fresh/06_checkpoints/step-700.safetensors",
+  "best_checkpoint": "outputs/p49a_tripo_vace13b_fresh/06_checkpoints/best.safetensors",
+  "size_bytes": 21908240,
+  "sha256": "95995a8961c83623e93c2925c78992cf717a147db0c2b2c35054e8c9bdf5a226"
+}

@@ -1,0 +1,13 @@
+{
+  "condition_generation_reads": [
+    "/root/autodl-tmp/clean_dataset_327431980_4/327431980_4_normalized/topdown_normalized/topdown.png",
+    "/root/autodl-tmp/clean_dataset_327431980_4/327431980_4_normalized/topdown_normalized/camera_para.json",
+    "/root/autodl-tmp/clean_dataset_327431980_4/327431980_4_normalized/topdown_normalized/topdown_depth.png",
+    "/root/autodl-tmp/clean_dataset_327431980_4/327431980_4_normalized/topdown_normalized/semantic_masks/floor_floor.png",
+    "/root/autodl-tmp/outputs/p32_newscene_condition_pair_audit/03_infinisplat_runtime/gaussians.pt"
+  ],
+  "clean_perspective_reads_before_condition_write": false,
+  "clean_perspective_camera_used_as_target_payload": true,
+  "clean_rgb_depth_normal_semantic_use": "post-write QA only",
+  "glb_used": false
+}

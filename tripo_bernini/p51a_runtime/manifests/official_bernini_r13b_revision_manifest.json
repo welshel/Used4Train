@@ -1,0 +1,101 @@
+{
+  "repository": "ByteDance/Bernini-R-1.3B-Diffusers",
+  "revision": "ff4c5d4d2d31365c2ffeb30e9753065ee18f58ce",
+  "files": [
+    {
+      "path": "config.json",
+      "size": 347,
+      "sha256": null
+    },
+    {
+      "path": "scheduler/scheduler_config.json",
+      "size": 751,
+      "sha256": null
+    },
+    {
+      "path": "text_encoder/config.json",
+      "size": 854,
+      "sha256": null
+    },
+    {
+      "path": "text_encoder/model-00001-of-00005.safetensors",
+      "size": 4972389712,
+      "sha256": "c0ef3a140898e228a3520c9adec60743d2e8e5b3d229651bb37f1a3921919f99"
+    },
+    {
+      "path": "text_encoder/model-00002-of-00005.safetensors",
+      "size": 4899225672,
+      "sha256": "481c7b2b39771c44df6dd8d13ee12ed072d731b4a650bd092885d4d52db229ad"
+    },
+    {
+      "path": "text_encoder/model-00003-of-00005.safetensors",
+      "size": 4966309504,
+      "sha256": "f93148bcc04052a169e1e49bfcf6125df6cf9bf243cb9c627da75266cf8e35c3"
+    },
+    {
+      "path": "text_encoder/model-00004-of-00005.safetensors",
+      "size": 4999880704,
+      "sha256": "a451792c739c05bca4606190cc2dd16731411bac03b4cf6aacc5767321f857c9"
+    },
+    {
+      "path": "text_encoder/model-00005-of-00005.safetensors",
+      "size": 2885866152,
+      "sha256": "7e76e18d224531b8197a46231cb53daf7f2f6ca707130252becf933026ac4eea"
+    },
+    {
+      "path": "text_encoder/model.safetensors.index.json",
+      "size": 22476,
+      "sha256": null
+    },
+    {
+      "path": "tokenizer/special_tokens_map.json",
+      "size": 7079,
+      "sha256": null
+    },
+    {
+      "path": "tokenizer/spiece.model",
+      "size": 4548313,
+      "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458"
+    },
+    {
+      "path": "tokenizer/tokenizer.json",
+      "size": 16837459,
+      "sha256": "20a46ac256746594ed7e1e3ef733b83fbc5a6f0922aa7480eda961743de080ef"
+    },
+    {
+      "path": "tokenizer/tokenizer_config.json",
+      "size": 61758,
+      "sha256": null
+    },
+    {
+      "path": "transformer/config.json",
+      "size": 494,
+      "sha256": null
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00001-of-00002.safetensors",
+      "size": 5387151416,
+      "sha256": "4170c80a25e7e0f58a6728cfdc33bba84033090196841c09656e6935afb8642f"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00002-of-00002.safetensors",
+      "size": 288919192,
+      "sha256": "7d5bef54ec13a33391ecd3c82dcca2c6b71610cda7e8a7485417e30d111f6406"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "size": 76607,
+      "sha256": null
+    },
+    {
+      "path": "vae/config.json",
+      "size": 724,
+      "sha256": null
+    },
+    {
+      "path": "vae/diffusion_pytorch_model.safetensors",
+      "size": 507591892,
+      "sha256": "d6e524b3fffede1787a74e81b30976dce5400c4439ba64222168e607ed19e793"
+    }
+  ]
+}

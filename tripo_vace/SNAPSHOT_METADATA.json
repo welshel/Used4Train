@@ -1,0 +1,41 @@
+{
+  "scope": "source code, launchers, configs, manifests, environment/model audits, and lightweight QA contracts only",
+  "active_training_at_snapshot": "P51A Bernini four-GPU training is external to this read/copy-only P49A snapshot; no active P49A controller was modified",
+  "excluded": [
+    "model weights",
+    "PNG/video payloads",
+    "LoRA checkpoints",
+    "training logs",
+    "virtual environments",
+    "caches",
+    "git metadata"
+  ],
+  "formal_data_policy": {
+    "condition": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p48_3_tripo_dynamic_cleanup/06_full72/condition_rgb_dynamic",
+    "target": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p48_tripo_clean_aligned/clean_rgb",
+    "pairing": "exact F00-F71 stems; 33-frame cyclic clips",
+    "clean_as_inference_input": false
+  },
+  "sources": {
+    "triposplat": {
+      "path": "/fs1/private/user/baitongyuan/projects/liuzh/TripoSplat",
+      "git_commit": "d8db9e018b413dd9c4a9fe22463781bf98e8e68d"
+    },
+    "diffsynth_studio": {
+      "path": "/fs1/private/user/baitongyuan/projects/liuzh/repos/DiffSynth-Studio",
+      "git_commit": "c458cb42ab1ee838bff85c6546e14bb01c3571e9",
+      "modified_files": [
+        "diffsynth/core/gradient/__init__.py",
+        "diffsynth/core/gradient/gradient_checkpoint.py",
+        "diffsynth/models/wan_video_vace.py",
+        "diffsynth/pipelines/wan_video.py"
+      ]
+    },
+    "topdown": {
+      "path": "/fs1/private/user/baitongyuan/projects/liuzh/train_inif/00_topdown_assets and /fs1/private/user/baitongyuan/projects/liuzh/train_inif/01_infinisplat"
+    },
+    "p49a_runtime": {
+      "path": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p49a_tripo_vace13b_fresh and /fs1/private/user/baitongyuan/projects/liuzh/scripts/p49a_*"
+    }
+  }
+}

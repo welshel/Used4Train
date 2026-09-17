@@ -1,0 +1,33 @@
+# Local environment configuration. Keep documented templates versioned.
+.env
+.env.*
+!.env.example
+
+# Python bytecode and test/tool caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local Python environments and packaging output
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+build/
+dist/
+
+# Editor and operating-system metadata
+.DS_Store
+.idea/
+.vscode/

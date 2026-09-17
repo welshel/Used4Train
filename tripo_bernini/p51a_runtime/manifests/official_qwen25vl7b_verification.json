@@ -1,0 +1,112 @@
+{
+  "repository": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "files_checked": 13,
+  "failures": [],
+  "files": [
+    {
+      "path": "chat_template.json",
+      "expected_bytes": 1050,
+      "actual_bytes": 1050,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "config.json",
+      "expected_bytes": 1374,
+      "actual_bytes": 1374,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "generation_config.json",
+      "expected_bytes": 216,
+      "actual_bytes": 216,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "model-00001-of-00005.safetensors",
+      "expected_bytes": 3900233256,
+      "actual_bytes": 3900233256,
+      "expected_sha256": "e97b877e47fde53a6c6e77aafb36e58e91ee9d95c4a3eeac6f1b5c0e6a1c986e",
+      "actual_sha256": "e97b877e47fde53a6c6e77aafb36e58e91ee9d95c4a3eeac6f1b5c0e6a1c986e",
+      "ok": true
+    },
+    {
+      "path": "model-00002-of-00005.safetensors",
+      "expected_bytes": 3864726320,
+      "actual_bytes": 3864726320,
+      "expected_sha256": "a9a300a43b4724eee2abe7c18ceb26768d0ab011eb0cad19d9bfd2476a24d024",
+      "actual_sha256": "a9a300a43b4724eee2abe7c18ceb26768d0ab011eb0cad19d9bfd2476a24d024",
+      "ok": true
+    },
+    {
+      "path": "model-00003-of-00005.safetensors",
+      "expected_bytes": 3864726424,
+      "actual_bytes": 3864726424,
+      "expected_sha256": "111223d173e00bbee81cba1216fad28668df3476706b7fd26f4d5b50f8b3a507",
+      "actual_sha256": "111223d173e00bbee81cba1216fad28668df3476706b7fd26f4d5b50f8b3a507",
+      "ok": true
+    },
+    {
+      "path": "model-00004-of-00005.safetensors",
+      "expected_bytes": 3864733680,
+      "actual_bytes": 3864733680,
+      "expected_sha256": "ef47f634fa57d46ee134edcc09f34085a47da1e16c12a2abe0d67118be6d72ed",
+      "actual_sha256": "ef47f634fa57d46ee134edcc09f34085a47da1e16c12a2abe0d67118be6d72ed",
+      "ok": true
+    },
+    {
+      "path": "model-00005-of-00005.safetensors",
+      "expected_bytes": 1089994880,
+      "actual_bytes": 1089994880,
+      "expected_sha256": "0c859795ad3a627a9b95bcb762e059d5b768a4a36fdd4affeff269d93fdecc67",
+      "actual_sha256": "0c859795ad3a627a9b95bcb762e059d5b768a4a36fdd4affeff269d93fdecc67",
+      "ok": true
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "expected_bytes": 57619,
+      "actual_bytes": 57619,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "preprocessor_config.json",
+      "expected_bytes": 350,
+      "actual_bytes": 350,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "tokenizer.json",
+      "expected_bytes": 7031645,
+      "actual_bytes": 7031645,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "tokenizer_config.json",
+      "expected_bytes": 5702,
+      "actual_bytes": 5702,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "vocab.json",
+      "expected_bytes": 2776833,
+      "actual_bytes": 2776833,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    }
+  ]
+}

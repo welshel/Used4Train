@@ -1,0 +1,27 @@
+{
+  "pair_frames": 72,
+  "clip_length": 33,
+  "resolution": [
+    672,
+    672
+  ],
+  "training_samples": 68,
+  "validation_samples": 4,
+  "validation_starts": [
+    0,
+    17,
+    31,
+    50
+  ],
+  "training_assumed_fps": 12,
+  "clean_dataset_fps": "UNRESOLVED",
+  "s0_condition_fields": [
+    "vace_video"
+  ],
+  "target_fields": [
+    "video"
+  ],
+  "auxiliary_condition_fields": [],
+  "resize_filter": "PIL.Image.Resampling.LANCZOS",
+  "source_policy": "resize_each_clip_frame_directly_from_pair_manifest_master_rgb"
+}

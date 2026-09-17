@@ -1,0 +1,44 @@
+{
+  "bernini": {
+    "original": "/fs1/private/user/baitongyuan/projects/liuzh/repos/Bernini",
+    "role": "official Bernini-R renderer source",
+    "snapshot": "upstream/Bernini"
+  },
+  "clean_alignment_and_condition": {
+    "original": "/fs1/private/user/baitongyuan/projects/liuzh/scripts",
+    "role": "exact clean camera render, global scene alignment, cleanup, dynamic suppression, adjusted condition render",
+    "snapshot": "local/condition_pipeline/scripts"
+  },
+  "p51a_training": {
+    "original": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p51a_bernini_r13b_single_scene/scripts",
+    "role": "paired dataset build, official preprocessing, Bernini training, DCP resume, validation, full72 finalization",
+    "snapshot": "p51a_runtime/scripts"
+  },
+  "runtime_assets_not_copied": {
+    "adjusted_condition_png": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/phase_b_adjusted_dynamic/condition_adjusted_rgb",
+    "clean_target_png": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p48_tripo_clean_aligned/clean_rgb",
+    "model": "/fs1/private/user/baitongyuan/projects/liuzh/models/Bernini-R-1.3B-Diffusers",
+    "raw_condition_png": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p48_3_tripo_dynamic_cleanup/06_full72/condition_rgb_dynamic",
+    "reason": "large immutable data and weights remain at authoritative paths"
+  },
+  "topdown_contracts": {
+    "original": "/fs1/private/user/baitongyuan/projects/liuzh/train_inif/00_topdown_assets",
+    "role": "topdown camera and scene asset contracts",
+    "snapshot": "local/topdown_condition/00_topdown_assets"
+  },
+  "topdown_to_condition": {
+    "original": "/fs1/private/user/baitongyuan/projects/liuzh/train_inif/01_infinisplat",
+    "role": "condition camera build, topdown inference, 72-frame render, pair manifest validation",
+    "snapshot": "local/topdown_condition/01_infinisplat"
+  },
+  "triposplat": {
+    "original": "/fs1/private/user/baitongyuan/projects/liuzh/TripoSplat",
+    "role": "TripoSplat source that produces the Gaussian scene artifact",
+    "snapshot": "upstream/TripoSplat"
+  },
+  "veomni": {
+    "original": "/fs1/private/user/baitongyuan/projects/liuzh/repos/VeOmni-v0.1.11",
+    "role": "official distributed and sequence-parallel runtime source",
+    "snapshot": "upstream/VeOmni-v0.1.11"
+  }
+}

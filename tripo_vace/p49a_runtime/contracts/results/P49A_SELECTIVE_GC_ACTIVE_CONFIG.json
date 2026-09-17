@@ -1,0 +1,8 @@
+{
+  "updated_at": "2026-09-15T18:00:40+08:00",
+  "checkpointing_period": 1,
+  "uncheckpointed_tail_blocks_per_chain": 6,
+  "fallback_order": [6, 4, 0],
+  "formal_training_world_size": 4,
+  "status": "active"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "not_run_fail_closed",
+  "required_steps": [0, 100, 200, 300, 400, 500, 600, 700],
+  "validation_starts": [0, 17, 31, 50],
+  "completed_steps": [],
+  "metrics": [],
+  "prediction_videos": [],
+  "comparison_videos": [],
+  "reason": "no trusted checkpoint was produced"
+}

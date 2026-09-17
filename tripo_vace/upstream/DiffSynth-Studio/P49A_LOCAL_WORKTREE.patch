@@ -1,0 +1,145 @@
+diff --git a/diffsynth/core/gradient/__init__.py b/diffsynth/core/gradient/__init__.py
+index 5791479..d19ef0f 100644
+--- a/diffsynth/core/gradient/__init__.py
++++ b/diffsynth/core/gradient/__init__.py
+@@ -1 +1 @@
+-from .gradient_checkpoint import gradient_checkpoint_forward
++from .gradient_checkpoint import gradient_checkpoint_forward, should_checkpoint_block
+diff --git a/diffsynth/core/gradient/gradient_checkpoint.py b/diffsynth/core/gradient/gradient_checkpoint.py
+index 495827f..270d925 100644
+--- a/diffsynth/core/gradient/gradient_checkpoint.py
++++ b/diffsynth/core/gradient/gradient_checkpoint.py
+@@ -1,6 +1,28 @@
+ import torch
+ 
+ 
++def should_checkpoint_block(
++    use_gradient_checkpointing: bool,
++    block_id: int,
++    checkpointing_period: int = 1,
++    total_blocks: int | None = None,
++    uncheckpointed_tail_blocks: int = 0,
++):
++    """Checkpoint one block per period; period=1 preserves legacy behavior."""
++    if checkpointing_period < 1:
++        raise ValueError("gradient checkpointing period must be >= 1")
++    if uncheckpointed_tail_blocks < 0:
++        raise ValueError("uncheckpointed tail block count must be >= 0")
++    if uncheckpointed_tail_blocks:
++        if total_blocks is None:
++            raise ValueError("total_blocks is required for an uncheckpointed tail")
++        if uncheckpointed_tail_blocks > total_blocks:
++            raise ValueError("uncheckpointed tail cannot exceed total blocks")
++        if block_id >= total_blocks - uncheckpointed_tail_blocks:
++            return False
++    return bool(use_gradient_checkpointing and block_id % checkpointing_period == 0)
++
++
+ try:
+     import deepspeed
+     _HAS_DEEPSPEED = True
+diff --git a/diffsynth/models/wan_video_vace.py b/diffsynth/models/wan_video_vace.py
+index 0e13183..2d3e3fc 100644
+--- a/diffsynth/models/wan_video_vace.py
++++ b/diffsynth/models/wan_video_vace.py
+@@ -1,6 +1,6 @@
+ import torch
+ from .wan_video_dit import DiTBlock
+-from ..core.gradient import gradient_checkpoint_forward
++from ..core.gradient import gradient_checkpoint_forward, should_checkpoint_block
+ 
+ class VaceWanAttentionBlock(DiTBlock):
+     def __init__(self, has_image_input, dim, num_heads, ffn_dim, eps=1e-6, block_id=0):
+@@ -54,6 +54,8 @@ class VaceWanModel(torch.nn.Module):
+         self, x, vace_context, context, t_mod, freqs,
+         use_gradient_checkpointing: bool = False,
+         use_gradient_checkpointing_offload: bool = False,
++        gradient_checkpointing_period: int = 1,
++        gradient_checkpointing_uncheckpointed_tail_blocks: int = 0,
+     ):
+         c = [self.vace_patch_embedding(u.unsqueeze(0)) for u in vace_context]
+         c = [u.flatten(2).transpose(1, 2) for u in c]
+@@ -62,10 +64,16 @@ class VaceWanModel(torch.nn.Module):
+                       dim=1) for u in c
+         ])
+         
+-        for block in self.vace_blocks:
++        for block_id, block in enumerate(self.vace_blocks):
+             c = gradient_checkpoint_forward(
+                 block,
+-                use_gradient_checkpointing,
++                should_checkpoint_block(
++                    use_gradient_checkpointing,
++                    block_id,
++                    gradient_checkpointing_period,
++                    total_blocks=len(self.vace_blocks),
++                    uncheckpointed_tail_blocks=gradient_checkpointing_uncheckpointed_tail_blocks,
++                ),
+                 use_gradient_checkpointing_offload,
+                 c, x, context, t_mod, freqs
+             )
+diff --git a/diffsynth/pipelines/wan_video.py b/diffsynth/pipelines/wan_video.py
+index e2ab76f..f37c8ab 100644
+--- a/diffsynth/pipelines/wan_video.py
++++ b/diffsynth/pipelines/wan_video.py
+@@ -13,7 +13,7 @@ from transformers import Wav2Vec2Processor
+ 
+ from ..core.device.npu_compatible_device import get_device_type
+ from ..diffusion import FlowMatchScheduler
+-from ..core import ModelConfig, gradient_checkpoint_forward
++from ..core import ModelConfig, gradient_checkpoint_forward, should_checkpoint_block
+ from ..diffusion.base_pipeline import BasePipeline, PipelineUnit
+ 
+ from ..models.wan_video_dit import WanModel, sinusoidal_embedding_1d
+@@ -1484,6 +1484,8 @@ def model_fn_wan_video(
+     cfg_merge: bool = False,
+     use_gradient_checkpointing: bool = False,
+     use_gradient_checkpointing_offload: bool = False,
++    gradient_checkpointing_period: int = 1,
++    gradient_checkpointing_uncheckpointed_tail_blocks: int = 0,
+     control_camera_latents_input = None,
+     fuse_vae_embedding_in_latents: bool = False,
+     wantodance_refimage_feature = None,
+@@ -1714,7 +1716,9 @@ def model_fn_wan_video(
+         vace_hints = vace(
+             x, vace_context, context, t_mod, freqs,
+             use_gradient_checkpointing=use_gradient_checkpointing,
+-            use_gradient_checkpointing_offload=use_gradient_checkpointing_offload
++            use_gradient_checkpointing_offload=use_gradient_checkpointing_offload,
++            gradient_checkpointing_period=gradient_checkpointing_period,
++            gradient_checkpointing_uncheckpointed_tail_blocks=gradient_checkpointing_uncheckpointed_tail_blocks,
+         )
+     if tea_cache_update:
+         x = tea_cache.update(x)
+@@ -1726,6 +1730,13 @@ def model_fn_wan_video(
+         
+         # Block
+         for block_id, block in enumerate(dit.blocks):
++            checkpoint_this_block = should_checkpoint_block(
++                use_gradient_checkpointing,
++                block_id,
++                gradient_checkpointing_period,
++                total_blocks=len(dit.blocks),
++                uncheckpointed_tail_blocks=gradient_checkpointing_uncheckpointed_tail_blocks,
++            )
+             if skip_9th_layer:
+                 # This is only used in WanToDance
+                 if block_id == 9:
+@@ -1738,7 +1749,7 @@ def model_fn_wan_video(
+                             x, context, t_mod, freqs, x_vap, context_vap, t_mod_vap, freqs_vap, block_id,
+                             use_reentrant=False
+                         )
+-                elif use_gradient_checkpointing:
++                elif checkpoint_this_block:
+                     x, x_vap = torch.utils.checkpoint.checkpoint(
+                         create_custom_forward_vap(block, vap),
+                         x, context, t_mod, freqs, x_vap, context_vap, t_mod_vap, freqs_vap, block_id,
+@@ -1749,7 +1760,7 @@ def model_fn_wan_video(
+             else:
+                 x = gradient_checkpoint_forward(
+                     block,
+-                    use_gradient_checkpointing,
++                    checkpoint_this_block,
+                     use_gradient_checkpointing_offload,
+                     x, context, t_mod, freqs
+                 )

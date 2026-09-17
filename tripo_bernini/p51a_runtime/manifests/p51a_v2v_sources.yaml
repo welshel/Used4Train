@@ -1,0 +1,10 @@
+sources:
+  - /fs1/private/user/baitongyuan/projects/liuzh/outputs/p51a_bernini_r13b_single_scene/preprocessed
+names:
+  - v2v$P51A_SINGLE_SCENE_ADJUSTED_TO_CLEAN
+level: sample
+stopping_strategy: never_exhausted
+upstream_sharded: true
+schedule:
+  - schedule_type: const
+    weights: [1.0]

@@ -1,0 +1,160 @@
+{
+  "repository": "ByteDance/Bernini-R-1.3B-Diffusers",
+  "revision": "ff4c5d4d2d31365c2ffeb30e9753065ee18f58ce",
+  "files_checked": 19,
+  "failures": [],
+  "files": [
+    {
+      "path": "config.json",
+      "expected_bytes": 347,
+      "actual_bytes": 347,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "scheduler/scheduler_config.json",
+      "expected_bytes": 751,
+      "actual_bytes": 751,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "text_encoder/config.json",
+      "expected_bytes": 854,
+      "actual_bytes": 854,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "text_encoder/model-00001-of-00005.safetensors",
+      "expected_bytes": 4972389712,
+      "actual_bytes": 4972389712,
+      "expected_sha256": "c0ef3a140898e228a3520c9adec60743d2e8e5b3d229651bb37f1a3921919f99",
+      "actual_sha256": "c0ef3a140898e228a3520c9adec60743d2e8e5b3d229651bb37f1a3921919f99",
+      "ok": true
+    },
+    {
+      "path": "text_encoder/model-00002-of-00005.safetensors",
+      "expected_bytes": 4899225672,
+      "actual_bytes": 4899225672,
+      "expected_sha256": "481c7b2b39771c44df6dd8d13ee12ed072d731b4a650bd092885d4d52db229ad",
+      "actual_sha256": "481c7b2b39771c44df6dd8d13ee12ed072d731b4a650bd092885d4d52db229ad",
+      "ok": true
+    },
+    {
+      "path": "text_encoder/model-00003-of-00005.safetensors",
+      "expected_bytes": 4966309504,
+      "actual_bytes": 4966309504,
+      "expected_sha256": "f93148bcc04052a169e1e49bfcf6125df6cf9bf243cb9c627da75266cf8e35c3",
+      "actual_sha256": "f93148bcc04052a169e1e49bfcf6125df6cf9bf243cb9c627da75266cf8e35c3",
+      "ok": true
+    },
+    {
+      "path": "text_encoder/model-00004-of-00005.safetensors",
+      "expected_bytes": 4999880704,
+      "actual_bytes": 4999880704,
+      "expected_sha256": "a451792c739c05bca4606190cc2dd16731411bac03b4cf6aacc5767321f857c9",
+      "actual_sha256": "a451792c739c05bca4606190cc2dd16731411bac03b4cf6aacc5767321f857c9",
+      "ok": true
+    },
+    {
+      "path": "text_encoder/model-00005-of-00005.safetensors",
+      "expected_bytes": 2885866152,
+      "actual_bytes": 2885866152,
+      "expected_sha256": "7e76e18d224531b8197a46231cb53daf7f2f6ca707130252becf933026ac4eea",
+      "actual_sha256": "7e76e18d224531b8197a46231cb53daf7f2f6ca707130252becf933026ac4eea",
+      "ok": true
+    },
+    {
+      "path": "text_encoder/model.safetensors.index.json",
+      "expected_bytes": 22476,
+      "actual_bytes": 22476,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "tokenizer/special_tokens_map.json",
+      "expected_bytes": 7079,
+      "actual_bytes": 7079,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "tokenizer/spiece.model",
+      "expected_bytes": 4548313,
+      "actual_bytes": 4548313,
+      "expected_sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "actual_sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "ok": true
+    },
+    {
+      "path": "tokenizer/tokenizer.json",
+      "expected_bytes": 16837459,
+      "actual_bytes": 16837459,
+      "expected_sha256": "20a46ac256746594ed7e1e3ef733b83fbc5a6f0922aa7480eda961743de080ef",
+      "actual_sha256": "20a46ac256746594ed7e1e3ef733b83fbc5a6f0922aa7480eda961743de080ef",
+      "ok": true
+    },
+    {
+      "path": "tokenizer/tokenizer_config.json",
+      "expected_bytes": 61758,
+      "actual_bytes": 61758,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "transformer/config.json",
+      "expected_bytes": 494,
+      "actual_bytes": 494,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00001-of-00002.safetensors",
+      "expected_bytes": 5387151416,
+      "actual_bytes": 5387151416,
+      "expected_sha256": "4170c80a25e7e0f58a6728cfdc33bba84033090196841c09656e6935afb8642f",
+      "actual_sha256": "4170c80a25e7e0f58a6728cfdc33bba84033090196841c09656e6935afb8642f",
+      "ok": true
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00002-of-00002.safetensors",
+      "expected_bytes": 288919192,
+      "actual_bytes": 288919192,
+      "expected_sha256": "7d5bef54ec13a33391ecd3c82dcca2c6b71610cda7e8a7485417e30d111f6406",
+      "actual_sha256": "7d5bef54ec13a33391ecd3c82dcca2c6b71610cda7e8a7485417e30d111f6406",
+      "ok": true
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "expected_bytes": 76607,
+      "actual_bytes": 76607,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "vae/config.json",
+      "expected_bytes": 724,
+      "actual_bytes": 724,
+      "expected_sha256": null,
+      "actual_sha256": null,
+      "ok": true
+    },
+    {
+      "path": "vae/diffusion_pytorch_model.safetensors",
+      "expected_bytes": 507591892,
+      "actual_bytes": 507591892,
+      "expected_sha256": "d6e524b3fffede1787a74e81b30976dce5400c4439ba64222168e607ed19e793",
+      "actual_sha256": "d6e524b3fffede1787a74e81b30976dce5400c4439ba64222168e607ed19e793",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "clean_used_as_inference_input": false,
+  "micro_batch_size": 2,
+  "official_backend_env": "MODELING_BACKEND=veomni",
+  "original_complete_resume_checkpoint": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p51a_bernini_r13b_single_scene/training/run_700/checkpoints/global_step_500",
+  "resolved_attention": "veomni_flash_attention_2_with_sp",
+  "resume_policy": "resume formal run only from original verified global_step_500; smoke global_step_501 is isolated and is never used as a formal checkpoint",
+  "smoke_checkpoint": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p51a_bernini_r13b_single_scene/smoke/sp_attention_recovery_step501/checkpoints/global_step_501",
+  "smoke_global_step": 501,
+  "smoke_grad_norm": 0.5559,
+  "smoke_loss": 0.0461,
+  "smoke_step_seconds": 46.19,
+  "status": "approved_after_isolated_four_gpu_recovery_smoke",
+  "timestamp_utc": "2026-09-17T03:27:30.661935+00:00",
+  "verified_absent_in_smoke_log": [
+    "missing sequence parallelism support",
+    "illegal memory access"
+  ],
+  "world_size": 4
+}

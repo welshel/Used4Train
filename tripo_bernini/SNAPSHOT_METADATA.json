@@ -1,0 +1,38 @@
+{
+  "active_training_at_snapshot": "P51A continuous four-GPU runner; snapshot operation is read and copy only",
+  "created_at_utc": "2026-09-17T04:57:54.450677+00:00",
+  "excluded": [
+    "model weights",
+    "video or PNG frame payloads",
+    "active checkpoints",
+    "training logs",
+    "Python virtual environments",
+    "git metadata",
+    "generated caches"
+  ],
+  "formal_data_policy": {
+    "clean_as_inference_input": false,
+    "condition": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/phase_b_adjusted_dynamic/condition_adjusted_rgb",
+    "pairing": "exact F00-F71 frame stems",
+    "target": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p48_tripo_clean_aligned/clean_rgb"
+  },
+  "scope": "source code, runtime configs, manifests, and lightweight QA contracts only",
+  "snapshot_name": ".code_bundle_20260917T1236CST.inprogress",
+  "sources": {
+    "bernini": {
+      "git_commit": "e6c2cf11843470b08491745947abcba9c3c6b079",
+      "path": "/fs1/private/user/baitongyuan/projects/liuzh/repos/Bernini"
+    },
+    "p51a_runtime": {
+      "path": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p51a_bernini_r13b_single_scene"
+    },
+    "triposplat": {
+      "git_commit": "d8db9e018b413dd9c4a9fe22463781bf98e8e68d",
+      "path": "/fs1/private/user/baitongyuan/projects/liuzh/TripoSplat"
+    },
+    "veomni": {
+      "git_commit": null,
+      "path": "/fs1/private/user/baitongyuan/projects/liuzh/repos/VeOmni-v0.1.11"
+    }
+  }
+}

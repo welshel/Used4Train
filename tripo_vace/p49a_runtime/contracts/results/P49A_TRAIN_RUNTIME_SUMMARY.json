@@ -1,0 +1,46 @@
+{
+  "world_size": 4,
+  "per_gpu_microbatch": 1,
+  "gradient_accumulation": 1,
+  "effective_batch": 4,
+  "global_steps_completed": 700,
+  "start_step": 650,
+  "resume_from_lora_checkpoint": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p49a_tripo_vace13b_fresh/06_checkpoints/step-650.safetensors",
+  "optimizer_reinitialized": true,
+  "resume_note": "Same P49A fresh LoRA continuation from complete global step 650; optimizer reinitialized; scheduler restored to global step 650; selective GC tail 6; no old LoRA.",
+  "warmup_steps": 0,
+  "timed_steps": 50,
+  "mean_timed_optimizer_step_sec": 14.321953035999758,
+  "gpu_max_memory_mib": [
+    {
+      "allocated": 40074.8701171875,
+      "reserved": 40394.0
+    },
+    {
+      "allocated": 40074.8701171875,
+      "reserved": 40294.0
+    },
+    {
+      "allocated": 40074.8701171875,
+      "reserved": 40294.0
+    },
+    {
+      "allocated": 40074.8701171875,
+      "reserved": 40394.0
+    }
+  ],
+  "gradient_checkpointing_requested": false,
+  "gradient_checkpointing_actual": true,
+  "gradient_checkpointing_period": 1,
+  "gradient_checkpointing_uncheckpointed_tail_blocks": 6,
+  "main_blocks_checkpointed": 24,
+  "vace_blocks_checkpointed": 9,
+  "model_cpu_offload": false,
+  "optimizer_cpu_offload": false,
+  "gradient_checkpointing_offload": false,
+  "fresh_lora": true,
+  "old_lora_loaded": false,
+  "lora_checkpoint": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p49a_tripo_vace13b_fresh/06_checkpoints/step-650.safetensors",
+  "same_run_lora_continuation": true,
+  "resume_from_checkpoint": null
+}

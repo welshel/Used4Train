@@ -1,0 +1,52 @@
+{
+  "official_rgb_only": true,
+  "source": "/root/autodl-tmp/clean_dataset_327431980_4/327431980_4_normalized/topdown_normalized/topdown.png",
+  "source_intrinsics_original": [
+    [
+      1423.259439,
+      0.0,
+      500.0
+    ],
+    [
+      0.0,
+      1423.259439,
+      500.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "source_intrinsics_inference": [
+    [
+      2186.12646484375,
+      0.0,
+      768.0
+    ],
+    [
+      0.0,
+      1639.5947265625,
+      576.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "original_image_shape": [
+    1000,
+    1000
+  ],
+  "inference_image_shape": [
+    1152,
+    1536
+  ],
+  "raw_gaussian_count": 1500000,
+  "checkpoint": "/root/autodl-tmp/InfiniSplat/checkpoints/infinisplat_rgb.ckpt",
+  "checkpoint_sha256": "d68a8c99109f06a264567766bd52d8d9ba81e51d044d0a966c3336160ea7007d",
+  "artifact_sha256": "52c37f49f829f26d45310a188b38d147ba98239caae6206dde0b995d11c35799",
+  "runtime_seconds": 27.1553635597229,
+  "clean_target_files_read": false
+}

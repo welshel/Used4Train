@@ -1,0 +1,5 @@
+ diffsynth/core/gradient/__init__.py            |  2 +-
+ diffsynth/core/gradient/gradient_checkpoint.py | 22 ++++++++++++++++++++++
+ diffsynth/models/wan_video_vace.py             | 14 +++++++++++---
+ diffsynth/pipelines/wan_video.py               | 19 +++++++++++++++----
+ 4 files changed, 49 insertions(+), 8 deletions(-)

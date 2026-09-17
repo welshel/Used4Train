@@ -1,0 +1,10 @@
+{
+  "project": "P49A_TRIPO_VACE13B_FRESH",
+  "condition_raw_dynamic": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p48_3_tripo_dynamic_cleanup/06_full72/condition_rgb_dynamic",
+  "clean_target_qa_only": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p48_tripo_clean_aligned/clean_rgb",
+  "vace_model_weights_excluded": "/fs1/private/user/baitongyuan/projects/liuzh/models/Wan2.1-VACE-1.3B",
+  "checkpoints_excluded": "/fs1/private/user/baitongyuan/projects/liuzh/outputs/p49a_tripo_vace13b_fresh/06_checkpoints",
+  "clean_as_generation_input": false,
+  "pairing": "exact F00-F71 stems; 33-frame cyclic PNG-list clips",
+  "snapshot_policy": "source/config/manifest/contracts only; no weights, frames, videos, checkpoints, logs, virtualenvs, caches, or git metadata"
+}

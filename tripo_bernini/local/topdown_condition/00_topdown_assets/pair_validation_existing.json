@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "frame_count": 72,
+  "resolution": [
+    896,
+    896
+  ],
+  "condition_dir": "/root/autodl-tmp/outputs/p32_newscene_condition_pair_audit/08_native_full72/rgb",
+  "clean_dir": "/root/autodl-tmp/clean_dataset_327431980_4/327431980_4_normalized/video_center_72",
+  "clean_target_files_used_for_condition_generation": false,
+  "checks": [
+    "72 contiguous frames",
+    "distinct condition/clean paths",
+    "896x896",
+    "camera_exact_pair=true",
+    "frame stems preserved"
+  ]
+}

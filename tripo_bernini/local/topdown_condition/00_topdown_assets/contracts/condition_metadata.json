@@ -1,0 +1,23 @@
+{
+  "scene_id": "327431980_4_normalized",
+  "primary_rgb": "NATIVE GAUSSIAN",
+  "frames": 72,
+  "resolution": [
+    896,
+    896
+  ],
+  "preview_fps": 12,
+  "clean_dataset_fps": "UNRESOLVED",
+  "raw_gaussian_count": 1500000,
+  "filtered_gaussian_count": 1483808,
+  "camera_source": "CLEAN 72 POSES",
+  "native_hole_semantics": "alpha <= 1e-3",
+  "normal_aware_auxiliary": [
+    "backside_mask",
+    "uncertain_mask",
+    "N2 normal",
+    "normal_confidence",
+    "visibility_depth"
+  ],
+  "clean_targets_enter_condition_generation": false
+}

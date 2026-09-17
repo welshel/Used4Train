@@ -1,0 +1,8 @@
+{
+  "status": "not_started_fail_closed",
+  "base_checkpoint": "ByteDance/Bernini-R-1.3B-Diffusers@ff4c5d4d2d31365c2ffeb30e9753065ee18f58ce",
+  "fresh_run": true,
+  "checkpoints": [],
+  "best_checkpoint": null,
+  "reason": "training gate failed before initialization because the complete official snapshot and runnable official environment were unavailable"
+}

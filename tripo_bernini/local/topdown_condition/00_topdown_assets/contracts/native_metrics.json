@@ -1,0 +1,16 @@
+{
+  "frames": 72,
+  "width": 896,
+  "height": 896,
+  "alpha_threshold": 0.001,
+  "coverage_min": 0.4586692342952806,
+  "coverage_p10": 0.6238819355867347,
+  "coverage_median": 0.7198486328125,
+  "coverage_mean": 0.700017691199201,
+  "coverage_max": 0.7668270188934949,
+  "adjacent_support_iou_median": 0.957900790942642,
+  "adjacent_support_iou_mean": 0.944048084239009,
+  "loop_support_iou": 0.9169890411059556,
+  "preview_fps": 12,
+  "clean_dataset_fps": "UNRESOLVED"
+}

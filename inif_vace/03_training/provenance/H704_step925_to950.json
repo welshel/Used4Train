@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-11T12:20:40.442145+08:00",
+  "stage": "P39_H704_925_TO950",
+  "source_checkpoint": "/root/autodl-tmp/outputs/p39_single_scene_quality_push/03_672_training/H672_step900_to950/run/checkpoints/optimizer_step-0925.safetensors",
+  "source_checkpoint_sha256": "936b16703099c232c28cf5738ac323b5ee31f1a11e377619349aaa542d99f86a",
+  "source_optimizer": "/root/autodl-tmp/outputs/p39_single_scene_quality_push/03_672_training/H672_step900_to950/run/checkpoints/optimizer_state_step-0925.pt",
+  "source_optimizer_sha256": "33fd54e15269100bbd1055703b565de50e5719c28d013665563ba73ef1e1d4d3",
+  "warm_start": true,
+  "resume_mode": "WEIGHT_AND_OPTIMIZER_RESUME",
+  "source_optimizer_step": 925,
+  "target_optimizer_step": 950,
+  "additional_steps": 25,
+  "resolution": [
+    704,
+    704
+  ],
+  "frames": 33,
+  "batch_size": 1,
+  "gradient_accumulation": 4,
+  "effective_batch": 4,
+  "gradient_checkpointing": false,
+  "offload": false,
+  "precision": "bf16",
+  "learning_rate": 0.0001,
+  "structural_supervision": false,
+  "inference_clean_inputs": false,
+  "smoke_weights_reused": false
+}

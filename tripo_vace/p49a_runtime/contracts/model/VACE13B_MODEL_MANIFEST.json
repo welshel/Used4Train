@@ -1,0 +1,143 @@
+{
+  "model_id": "Wan-AI/Wan2.1-VACE-1.3B",
+  "source": "https://www.modelscope.cn/models/Wan-AI/Wan2.1-VACE-1.3B",
+  "snapshot_commit": "6714b95cf37b2a609fe9087387d6313cd311f500",
+  "local_model_path": "/fs1/private/user/baitongyuan/projects/liuzh/models/Wan2.1-VACE-1.3B",
+  "download_method": "git clone + git lfs pull from ModelScope",
+  "lfs_fsck": "PASS",
+  "required_components": [
+    "VACE diffusion transformer",
+    "Wan2.1 VAE",
+    "UMT5-XXL text encoder",
+    "UMT5 tokenizer"
+  ],
+  "files": [
+    {
+      "relative_path": ".gitattributes",
+      "size_bytes": 2143,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "LICENSE.txt",
+      "size_bytes": 11357,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "README.md",
+      "size_bytes": 40485,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "Wan2.1_VAE.pth",
+      "size_bytes": 507609880,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500",
+      "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+    },
+    {
+      "relative_path": "assets/comp_effic.png",
+      "size_bytes": 1793594,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "assets/data_for_diff_stage.jpg",
+      "size_bytes": 528268,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "assets/i2v_res.png",
+      "size_bytes": 891681,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "assets/logo.png",
+      "size_bytes": 56322,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "assets/t2v_res.jpg",
+      "size_bytes": 301030,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "assets/vben_vs_sota.png",
+      "size_bytes": 1552119,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "assets/video_dit_arch.jpg",
+      "size_bytes": 643369,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "assets/video_vae_res.jpg",
+      "size_bytes": 212586,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "config.json",
+      "size_bytes": 349,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500",
+      "sha256": "e19df24acf3f440e0aea37d299f22b96f88d164f3349ae696daecd960a35ab1e"
+    },
+    {
+      "relative_path": "configuration.json",
+      "size_bytes": 81,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500",
+      "sha256": "745e37f6bb62f8a294ed12e44ffe4733bd2259d6f7029939f1297cd1b226fa4f"
+    },
+    {
+      "relative_path": "diffusion_pytorch_model.safetensors",
+      "size_bytes": 7146067848,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500",
+      "sha256": "c46a6f5f7d32c453c3983bbc59761ea41cd02ad584fb55d1a7ee2b76145847a2"
+    },
+    {
+      "relative_path": "google/umt5-xxl/special_tokens_map.json",
+      "size_bytes": 6623,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "google/umt5-xxl/spiece.model",
+      "size_bytes": 4548313,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500",
+      "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458"
+    },
+    {
+      "relative_path": "google/umt5-xxl/tokenizer.json",
+      "size_bytes": 16837417,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500",
+      "sha256": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b"
+    },
+    {
+      "relative_path": "google/umt5-xxl/tokenizer_config.json",
+      "size_bytes": 61728,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500"
+    },
+    {
+      "relative_path": "models_t5_umt5-xxl-enc-bf16.pth",
+      "size_bytes": 11361920418,
+      "exists": true,
+      "source": "ModelScope Wan-AI/Wan2.1-VACE-1.3B @ commit 6714b95cf37b2a609fe9087387d6313cd311f500",
+      "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"
+    }
+  ]
+}

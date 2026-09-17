@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "frames": [
+    {
+      "frame": 0,
+      "geometry_hit_ratio": 0.6936184630102041,
+      "alpha_mean": 0.5933498740196228
+    },
+    {
+      "frame": 17,
+      "geometry_hit_ratio": 1.0,
+      "alpha_mean": 0.9390037059783936
+    },
+    {
+      "frame": 31,
+      "geometry_hit_ratio": 1.0,
+      "alpha_mean": 0.7769855856895447
+    },
+    {
+      "frame": 50,
+      "geometry_hit_ratio": 0.7399927256058674,
+      "alpha_mean": 0.6765812635421753
+    }
+  ]
+}

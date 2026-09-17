@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-11T11:00:01.395096+08:00",
+  "stage": "P39_H672_900_TO950",
+  "source_checkpoint": "/root/autodl-tmp/outputs/p38_high_quality_roomtour/checkpoints/P38_H640_STEP0900_BEST.safetensors",
+  "source_checkpoint_sha256": "1e7e2e7c4af43a9a3944b8bb3dad21f9e84a7c423194414af0e28c749b56951b",
+  "source_optimizer": "/root/autodl-tmp/outputs/p38_high_quality_roomtour/checkpoints/P38_H640_STEP0900_OPTIMIZER.pt",
+  "source_optimizer_sha256": "042cabb84b37e6a18ea3617d8198e785f5b4a12b4812cbd4a2c7765f9a30ed2d",
+  "warm_start": true,
+  "resume_mode": "WEIGHT_AND_OPTIMIZER_RESUME",
+  "source_optimizer_step": 900,
+  "target_optimizer_step": 950,
+  "additional_steps": 50,
+  "resolution": [
+    672,
+    672
+  ],
+  "frames": 33,
+  "batch_size": 1,
+  "gradient_accumulation": 4,
+  "effective_batch": 4,
+  "gradient_checkpointing": false,
+  "offload": false,
+  "precision": "bf16",
+  "learning_rate": 0.0001,
+  "structural_supervision": false,
+  "inference_clean_inputs": false,
+  "smoke_weights_reused": false
+}

@@ -1,0 +1,79 @@
+model:
+  config_path: /fs1/private/user/baitongyuan/projects/liuzh/models/Bernini-R-1.3B-Diffusers
+  vae_config_path: null
+  model_config:
+    scratch: false
+    ema_decay: null
+    skip_transformer_2: true
+    switch_dit_boundary: 0.0
+    wan22_base: /fs1/private/user/baitongyuan/projects/liuzh/models/Bernini-R-1.3B-Diffusers
+  ops_implementation:
+    attn_implementation: flash_attention_2
+    cross_entropy_loss_implementation: eager
+    rms_norm_implementation: eager
+    swiglu_mlp_implementation: eager
+    rotary_pos_emb_implementation: eager
+
+data:
+  train_path: /fs1/private/user/baitongyuan/projects/liuzh/outputs/p51a_bernini_r13b_single_scene/manifests/p51a_v2v_sources.yaml
+  datasets_type: iterable
+  multisource_datasets_type: veomni_weighted_multisource
+  data_type: diffusion
+  max_seq_len: 50000
+  train_size: 100000000000000
+  dyn_bsz_buffer_size: 100
+  dataloader:
+    type: native
+    num_workers: 1
+    prefetch_factor: 2
+    drop_last: true
+  noise_scheduler_config:
+    shift_config:
+      v2v: 5.0
+    weighting_scheme_config:
+      v2v: mode
+    noise_tmin: 0.0
+    noise_tmax: 1.0
+  max_vae_frames: 33
+  text_dropout_rate: 0.0
+  img_dropout_rate: 0.0
+  video_dropout_rate: 0.0
+
+train:
+  init_device: meta
+  dyn_bsz: true
+  global_batch_size: 1
+  micro_batch_size: 1
+  num_train_epochs: 1
+  max_steps: 700
+  bsz_warmup_ratio: 0.0
+  freeze_modules: ["t5_text_encoder"]
+  use_src_id_rotary_emb: true
+  accelerator:
+    ulysses_size: 4
+    fsdp_config:
+      fsdp_mode: fsdp2
+      mixed_precision:
+        enable: true
+  gradient_checkpointing:
+    enable: true
+  optimizer:
+    type: adamw
+    lr: 1.0e-5
+    lr_start: 1.0e-5
+    lr_warmup_ratio: 0.0
+    lr_decay_style: constant
+    weight_decay: 0.01
+    max_grad_norm: 1.0
+  checkpoint:
+    output_dir: /fs1/private/user/baitongyuan/projects/liuzh/outputs/p51a_bernini_r13b_single_scene/training/run_700
+    manager: dcp
+    save_steps: 100
+    save_epochs: 0
+    save_async: false
+    save_hf_weights: false
+    load_path: auto
+  wandb:
+    enable: false
+    project: P51A_BERNINI_R13B_SINGLE_SCENE_V2V
+    name: fresh_full_finetune

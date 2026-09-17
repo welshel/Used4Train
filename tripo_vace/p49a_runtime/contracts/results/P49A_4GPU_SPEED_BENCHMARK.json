@@ -1,0 +1,81 @@
+{
+  "A": {
+    "configuration": "A_4GPU_microbatch1",
+    "status": "PASS",
+    "world_size": 4,
+    "per_gpu_microbatch": 1,
+    "gradient_accumulation": 1,
+    "effective_batch": 4,
+    "warmup_optimizer_steps": 5,
+    "timed_optimizer_steps": 10,
+    "mean_sec_per_optimizer_step": "14.881456",
+    "global_samples_per_sec": "0.268791",
+    "global_frames_per_sec": "8.870100",
+    "actual_gradient_checkpointing": "ON_framework_forced",
+    "cpu_model_optimizer_offload": "OFF",
+    "max_allocated_mib_per_gpu": "25377.26",
+    "max_reserved_mib_per_gpu": "36170.00",
+    "peak_nvidia_smi_mib_per_gpu": "36634",
+    "active_gpu_utilization_mean_pct": "97.21;96.80;98.31;97.53",
+    "all_four_gpus_active": "YES",
+    "notes": "Native PNG lists; 33f 672x672; fresh rank16 LoRA; official base only."
+  },
+  "B": {
+    "configuration": "B_4GPU_microbatch2",
+    "status": "UNSUPPORTED",
+    "world_size": 4,
+    "per_gpu_microbatch": 2,
+    "gradient_accumulation": 1,
+    "effective_batch": 8,
+    "warmup_optimizer_steps": "",
+    "timed_optimizer_steps": "",
+    "mean_sec_per_optimizer_step": "",
+    "global_samples_per_sec": "",
+    "global_frames_per_sec": "",
+    "actual_gradient_checkpointing": "",
+    "cpu_model_optimizer_offload": "OFF",
+    "max_allocated_mib_per_gpu": "",
+    "max_reserved_mib_per_gpu": "",
+    "peak_nvidia_smi_mib_per_gpu": "",
+    "active_gpu_utilization_mean_pct": "",
+    "all_four_gpus_active": "",
+    "notes": "Official UnifiedDataset runner uses batch-size=1 with collate samples[0]; batch2 would silently discard one sample. Not benchmarked or used."
+  },
+  "runtime_summary": {
+    "world_size": 4,
+    "per_gpu_microbatch": 1,
+    "gradient_accumulation": 1,
+    "effective_batch": 4,
+    "global_steps_completed": 15,
+    "warmup_steps": 5,
+    "timed_steps": 10,
+    "mean_timed_optimizer_step_sec": 14.881456393599729,
+    "gpu_max_memory_mib": [
+      {
+        "allocated": 25377.26025390625,
+        "reserved": 36170.0
+      },
+      {
+        "allocated": 25377.26025390625,
+        "reserved": 36170.0
+      },
+      {
+        "allocated": 25377.26025390625,
+        "reserved": 36170.0
+      },
+      {
+        "allocated": 25377.26025390625,
+        "reserved": 36170.0
+      }
+    ],
+    "gradient_checkpointing_requested": false,
+    "gradient_checkpointing_actual": true,
+    "model_cpu_offload": false,
+    "optimizer_cpu_offload": false,
+    "gradient_checkpointing_offload": false,
+    "fresh_lora": true,
+    "old_lora_loaded": false,
+    "lora_checkpoint": null,
+    "resume_from_checkpoint": null
+  }
+}

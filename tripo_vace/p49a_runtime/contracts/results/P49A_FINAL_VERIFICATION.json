@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-09-15T19:45:00+08:00",
+  "formal_validations": 19,
+  "training_log_steps": 700,
+  "best_checkpoint_tensors": 300,
+  "best_checkpoint_sha256": "95995a8961c83623e93c2925c78992cf717a147db0c2b2c35054e8c9bdf5a226",
+  "condition_frames": 72,
+  "target_frames": 72,
+  "frame_pairing_exact": true,
+  "best_frames": 72,
+  "videos": {
+    "step0_start31": {
+      "width": 672,
+      "height": 672,
+      "r_frame_rate": "12/1",
+      "duration": "2.750000",
+      "nb_read_frames": "33"
+    },
+    "best_start31": {
+      "width": 672,
+      "height": 672,
+      "r_frame_rate": "12/1",
+      "duration": "2.750000",
+      "nb_read_frames": "33"
+    },
+    "start31_comparison": {
+      "width": 1080,
+      "height": 388,
+      "r_frame_rate": "12/1",
+      "duration": "2.750000",
+      "nb_read_frames": "33"
+    },
+    "best_full72": {
+      "width": 672,
+      "height": 672,
+      "r_frame_rate": "12/1",
+      "duration": "6.000000",
+      "nb_read_frames": "72"
+    },
+    "full72_comparison": {
+      "width": 1080,
+      "height": 388,
+      "r_frame_rate": "12/1",
+      "duration": "6.000000",
+      "nb_read_frames": "72"
+    }
+  },
+  "model_manifest": "PASS",
+  "full72_exposure_metrics_present": true,
+  "active_p49a_python_processes": [],
+  "tests": "24/24 PASS",
+  "code_review": {
+    "correctness": "PASS: exact formal validation-name matching excludes preliminary runs; exposure-matched metrics are generated.",
+    "readability": "PASS: minimal helpers and descriptive regression tests.",
+    "architecture": "PASS: changes remain inside postprocessing and its existing test module.",
+    "security": "PASS: no credentials, external input execution, or path broadening added.",
+    "performance": "PASS: one exposure scaling operation per image; negligible relative to existing QA metrics."
+  }
+}
